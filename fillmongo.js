@@ -59,9 +59,9 @@ function insertion(data) {
 
         collection.insertOne(data, function(err, res) {
             if (err) throw err;
-            //console.log(JSON.stringify(data) + " is inserted");
+            console.log(JSON.stringify(data) + " is inserted");
         });
-        //console.log("Success!");
+        console.log("Success!");
         db.close();
         
     });
@@ -82,7 +82,7 @@ function loadCSVtoDB(csv) {
     myFile.on('line', function(line) {
     	if(i == 0){
     		keys = line.split(',');
-    		//console.log('keys[0]:' + keys[0] + ' keys[1] ' + keys[1]  );
+    		console.log('keys[0]:' + keys[0] + ' keys[1] ' + keys[1]  );
     	}else{
     		
         	const words = line.split(',');
@@ -90,8 +90,8 @@ function loadCSVtoDB(csv) {
             message =  i + " : " + insertion(data) + "<br>";
             console.log(message);
             collectsData(message);
-            //console.log(message);
-        	//console.log('words[0]:' + words[0] + ' words[1] ' +  words[1] );
+            console.log(message);
+        	console.log('words[0]:' + words[0] + ' words[1] ' +  words[1] );
     	}
     	i++;
         
@@ -127,6 +127,6 @@ function formJSON(keys, words){
 	for(var i = 0; i < keys.length; i++){
 		data[keys[i]] = words[i];
 	}
-	//console.log(JSON.stringify(data));
+	console.log(JSON.stringify(data));
 	return data;
 }
