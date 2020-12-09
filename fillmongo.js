@@ -4,7 +4,7 @@ const url = "mongodb+srv://nickmurphy1:108Surfwalk@cluster0.xj4qk.mongodb.net/?r
 var http = require('http');
 var port = process.env.PORT || 3000;
 var csv = 'companies-1.csv';
-var coll = 'companies';
+var coll = 'Companies';
 
 let m =  "";
 let x = "" ;
