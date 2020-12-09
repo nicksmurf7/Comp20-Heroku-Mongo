@@ -15,10 +15,10 @@ http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write("<h1>Import Companies Collection From CSV</h1>");
     res.write ("<br>");
-    res.write("<h2> STEP 1: delete existing companies collection </h2>")
+    res.write("<h2> STEP 1: delete existing companies collection </h2>");
     res.write("<h3>" + x + "</h3>");
     res.write ("<hr>");
-    res.write("<h2> STEP 2: insert corresponding entries into the MongoDB companies collection  </h2>")
+    res.write("<h2> STEP 2: insert corresponding entries into the MongoDB companies collection  </h2>");
    res.write ("<h3>" + m + "</h3>");
    
    
