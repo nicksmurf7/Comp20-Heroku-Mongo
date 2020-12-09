@@ -59,9 +59,9 @@ function insertion(data) {
 
         collection.insertOne(data, function(err, res) {
             if (err) throw err;
-            console.log(JSON.stringify(data) + " is inserted");
+            //console.log(JSON.stringify(data) + " is inserted");
         });
-        console.log("Success!");
+        //console.log("Success!");
         db.close();
         
     });
@@ -82,7 +82,7 @@ function loadCSVtoDB(csv) {
     myFile.on('line', function(line) {
     	if(i == 0){
     		keys = line.split(',');
-    		console.log('keys[0]:' + keys[0] + ' keys[1] ' + keys[1]  );
+    		//console.log('keys[0]:' + keys[0] + ' keys[1] ' + keys[1]  );
     	}else{
     		
         	const words = line.split(',');
@@ -91,7 +91,7 @@ function loadCSVtoDB(csv) {
             console.log(message);
             collectsData(message);
             console.log(message);
-        	console.log('words[0]:' + words[0] + ' words[1] ' +  words[1] );
+        	//console.log('words[0]:' + words[0] + ' words[1] ' +  words[1] );
     	}
     	i++;
         
@@ -111,7 +111,7 @@ function collectionDelete(coll){
   dbo.collection(coll).drop(function(err, delOK) {
     if (err) throw err;
     if (delOK) {
-    	console.log("Collection deleted");
+    	//console.log("Collection deleted");
     	
     }
 
